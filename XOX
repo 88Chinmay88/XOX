@@ -1,0 +1,198 @@
+a="HI LETS PLAY A XOX GAME"
+print(a)
+def oard():
+     a = list(['0','1','2','3','4','5','6','7','8'])   
+     
+     print(a[0] ,   "||"  ,   a[1], '||' ,   a[2])
+     print("-||-------||--")
+     print(a[3], "||", a[4], '||', a[5])
+     print('--||-----------')
+     print(a[6], "||", a[7], '||', a[8])
+
+
+    
+
+
+print("WLCOME TO XOX ")
+print("INSTRUCTIONS : \n 1. player 1 carry 'X' through out the game \n 2. player 2 carry ""O"" through out the game ")
+
+a = list(['0','1','2','3','4','5','6','7','8'])           
+
+print(a[0], "||", a[1], '||', a[2])
+print("--||---||----")
+print(a[3], "||", a[4], '||', a[5])
+print('--||---||---')
+print(a[6], "||", a[7], '||', a[8])
+
+
+  
+
+for i in a :
+    
+        
+    b = eval(input("enter the playr 1 position : "))
+    if(b >= 9):
+        print("invalid choice\nenter the correct value\n")
+        continue
+    if(b<=0):
+        print("invalid choice\nenter the correct value\n")
+        continue
+    
+    if(a[b]=='O' ):
+        print(" this blocked is alrady blocked try another")
+        b = eval(input("enter the playr 1 position : "))
+    elif(a[b] == 'X'):
+        print(" this blocked is alrady blocked try another")
+        b = eval(input("enter the playr 1 position : "))
+    a[b]= 'X'
+
+    print(a[0], "||", a[1], '||', a[2])
+    print("--||---||----")
+    print(a[3], "||", a[4], '||', a[5])
+    print('--||---||---')
+    print(a[6], "||", a[7], '||', a[8])
+
+   
+    
+    if (a[0] == a[1] == a[2] == "X") :
+        print ("Player 1 is winner ")
+        exit()#1 
+    elif(a[0] == a[1] == a[2] == 'O') : 
+        print ("Player 2 is winner 🏆 ")
+        exit()        
+    elif(a[0] == a[3] == a[6] == "X"):
+        print ("player 1 is winner 🏆")
+        exit()
+        
+    elif(a[0] == a[3] == a[6] == "O"):
+        print ("player 2 is winner 🏆")
+        exit()            
+    elif(a[6] == a[7] == a[8] == "X"):
+        print ("player 1 is winner 🏆")
+        exit()#4
+    elif(a[6] == a[7] == a[8] == "O"):
+        print ("player 2 is winner 🏆")
+        exit()        
+    elif(a[3] == a[4] == a[5] == "X"):
+        print ("player 1 is winner 🏆")
+        exit()#5
+    elif(a[3] == a[4] == a[5] == "O"):
+        print ("player 2 is winner 🏆")
+        exit()
+    elif(a[2] == a[5] == a[8] == "X") :
+        print ("player 1 is winner ")
+        exit()
+    elif(a[2] == a[5] == a[8] == "O") :
+        print ("player 2 is winner ")
+        exit()
+                    
+    elif(a[1] == a[4] == a[7] == "X") :
+        print ("player 1 is winner ")
+        exit()
+    elif(a[1] == a[4] == a[7] == "O") :
+        print ("player 2 is winner ")
+        exit()        
+    elif(a[0] == a[4] == a[8] == "X") :
+        print ("player 1 is winner ")
+        exit()
+    elif(a[0] == a[4] == a[8] == "O") :
+        print ("player 2 is winner ")
+        exit()  
+    elif(a[2] == a[4] == a[6] == "X" ):
+        print("player 1 is winner")
+        exit()
+    elif(a[2] == a[4] == a[6] == "O" ): 
+        print("player 2 is winner")
+        exit()
+    elif(a[0] != '0' and a[1] != '1' and a[2] != '2'  and a[3] != '3'  and a[4] != '4'  and a[5] != '5'  and a[6] != '6' and a[7] != '7'  and a[8] != '8'   ):
+       print("match is draw")
+       exit()
+    
+      
+
+
+   
+    c = eval(input("enter the player 2 position :"))
+    if(c >= 9):
+        print("invalid choice\nenter the correct value\n")
+    c = eval(input("enter the player 2 position :"))
+    if(c<=0):
+        print("invalid choice\nenter the correct value\n")
+    c = eval(input("enter the player 2 position :"))
+    
+    if(a[c]=='O' ):
+        print(" this blocked is alrady blocked try another")
+        c = eval(input("enter the playr 2 position : "))
+    elif(a[c] == 'X'):
+        print(" this blocked is alrady blocked try another")
+        c = eval(input("enter the playr 2 position : "))
+    
+    
+        
+    a[c]= 'O'
+    print(a[0], "||", a[1], '||', a[2])
+    print("--||-----------")
+    print(a[3], "||", a[4], '||', a[5])
+    print('--||-----------')
+    print(a[6], "||", a[7], '||', a[8])
+
+    if (a[0] == a[1] == a[2] == "X") :
+        print ("Player 1 is winner 🏆")
+        exit()#1 
+    elif(a[0] == a[1] == a[2] == 'O') : 
+        print ("Player 2 is winner 🏆 ")
+        exit()        
+    elif(a[0] == a[3] == a[6] == "X"):
+        print ("player 1 is winner 🏆")
+        exit()
+        
+    elif(a[0] == a[3] == a[6] == "O"):
+        print ("player 2 is winner 🏆")
+        exit()            
+    elif(a[6] == a[7] == a[8] == "X"):
+        print ("player 1 is winner 🏆")
+        exit()#4
+    elif(a[6] == a[7] == a[8] == "O"):
+        print ("player 2 is winner 🏆")
+        exit()        
+    elif(a[3] == a[4] == a[5] == "X"):
+        print ("player 1 is winner 🏆")
+        exit()#5
+    elif(a[3] == a[4] == a[5] == "O"):
+        print ("player 2 is winner 🏆")
+        exit()
+    elif(a[2] == a[5] == a[8] == "X") :
+        print ("player 1 is winner ")
+        exit()
+    elif(a[2] == a[5] == a[8] == "O") :
+        print ("player 2 is winner ")
+        exit()
+                    
+    elif(a[1] == a[4] == a[7] == "X") :
+        print ("player 1 is winner ")
+        exit()
+    elif(a[1] == a[4] == a[7] == "O") :
+        print ("player 2 is winner ")
+        exit()        
+    elif(a[0] == a[4] == a[8] == "X") :
+        print ("player 1 is winner ")
+        exit()
+    elif(a[0] == a[4] == a[8] == "O") :
+        print ("player 2 is winner ")
+        exit()  
+    elif(a[2] == a[4] == a[6] == "X" ):
+        print("player 1 is winner")
+        exit()
+    elif(a[2] == a[4] == a[6] == "O" ): 
+        print("player 2 is winner")
+        exit()
+
+    elif(a[c] == 'O' and a[c] == 'X'):
+        print(" this blocked is alrady blocked try another")
+        c= eval(input("enter the playr 2 position"))
+
+    
+    elif(a[0] != '0' and a[1] != '1' and a[2] != '2'  and a[3] != '3'  and a[4] != '4'  and a[5] != '5'  and a[6] != '6' and a[7] != '7'  and a[8] != '8'   ):
+        print('match is draw \n press 1 to play again')
+        b = eval(input("enter the playr 1 position : "))
+        exit()
